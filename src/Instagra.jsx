@@ -1,7 +1,7 @@
 // import { IconButton, InputAdornment, TextField } from "@mui/material";
 import React, { useState } from "react";
 import styled from "styled-components";
-
+import facebookPnp from "./images/free-icon-facebook-124010 (1).png";
 const InstagramClone = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -29,14 +29,14 @@ const InstagramClone = () => {
       <Logo>Instagram</Logo>
       <LoginForm onSubmit={handleSubmit}>
         <InputField
-          type="text"
+          type="email"
           placeholder="Телефон, имя пользователя или эл. адрес"
           className="input-field"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
         <InputField
-          type="text"
+          type="password"
           placeholder="пароль"
           className="input-field"
           value={password}
@@ -47,10 +47,21 @@ const InstagramClone = () => {
           Войти
         </LoginBtn>
       </LoginForm>
+      <ContainerForLeaner>
+        <Border></Border> <TitleOr>ИЛИ</TitleOr> <Border></Border>
+      </ContainerForLeaner>
+      <ContainerForFacebook>
+        <FaceBookIcon>
+          <img src={facebookPnp} alt="" />
+        </FaceBookIcon>
+        <Title>Войти через Facebook</Title>
+      </ContainerForFacebook>
       <Links>
         <Link href="#">Забыли пароль?</Link>
-        <Link href="#">Регистрация</Link>
       </Links>
+      <LinksForRegister>
+        <Link href="#">Регистрация</Link>
+      </LinksForRegister>
     </Container>
   );
 };
@@ -61,6 +72,7 @@ const Container = styled.div`
   max-width: 300px;
   margin: 150px auto;
   text-align: center;
+  border: 1px solid #dbdbdb;
 
   @media (max-width: 480px) {
     /* Применяем стили только для мобильных устройств с шириной экрана до 480px */
@@ -86,7 +98,7 @@ const Logo = styled.h1`
 const LoginForm = styled.form`
   padding: 20px;
   background-color: #fff;
-  border: 1px solid #dbdbdb;
+
   border-radius: 5px;
 
   @media (max-width: 480px) {
@@ -94,6 +106,12 @@ const LoginForm = styled.form`
     /* Изменяем отступ между элементами и уменьшаем размер логотипа */
     padding: 10px;
   }
+`;
+
+const ContainerForFacebook = styled.div`
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
 `;
 
 const InputField = styled.input`
@@ -117,7 +135,7 @@ const LoginBtn = styled.button`
   color: #fff;
   font-weight: bold;
   border: none;
-  border-radius: 3px;
+  border-radius: 10px;
   cursor: pointer;
 
   @media (max-width: 480px) {
@@ -152,3 +170,33 @@ const Link = styled.a`
     font-size: 12px;
   }
 `;
+
+const ContainerForLeaner = styled.div`
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+`;
+
+const FaceBookIcon = styled.div`
+  position: relative;
+  left: 30px;
+`;
+
+const Title = styled.div`
+  position: relative;
+  right: 14px;
+  bottom: 3px;
+  color: #405de6;
+`;
+
+const Border = styled.div`
+  width: 100px;
+  border-top: 1px solid black;
+`;
+
+const TitleOr = styled.div`
+  position: relative;
+  bottom: 10px;
+`;
+
+const LinksForRegister = styled.div``;
