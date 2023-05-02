@@ -29,7 +29,7 @@ const InstagramClone = () => {
       <Logo>Instagram</Logo>
       <LoginForm onSubmit={handleSubmit}>
         <InputField
-          type="email"
+          type="text"
           placeholder="Телефон, имя пользователя или эл. адрес"
           className="input-field"
           value={username}
