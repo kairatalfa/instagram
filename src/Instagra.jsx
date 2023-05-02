@@ -82,7 +82,6 @@ const Container = styled.div`
 `;
 
 const Logo = styled.h1`
-  font-family: "Billabong", cursive;
   font-size: 36px;
   color: black;
   margin-bottom: 30px;
