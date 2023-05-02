@@ -30,17 +30,17 @@ const InstagramClone = () => {
       <LoginForm onSubmit={handleSubmit}>
         <InputField
           type="text"
-          placeholder="Логин"
+          placeholder="Телефон, имя пользователя или эл. адрес"
           className="input-field"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
         <InputField
           type="text"
-          placeholder="Логин"
+          placeholder="пароль"
           className="input-field"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
         />
 
         <LoginBtn type="submit" className="login-btn">
@@ -97,12 +97,12 @@ const LoginForm = styled.form`
 `;
 
 const InputField = styled.input`
-  width: 100%;
+  width: 240px;
+  margin-right: 20px;
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #dbdbdb;
   border-radius: 3px;
-
   @media (max-width: 480px) {
     /* Применяем стили только для мобильных устройств с шириной экрана до 480px */
     /* Изменяем отступ между элементами и уменьшаем размер логотипа */
