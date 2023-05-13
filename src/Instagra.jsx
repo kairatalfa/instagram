@@ -36,7 +36,7 @@ const InstagramClone = () => {
           onChange={(e) => setUsername(e.target.value)}
         />
         <InputField
-          type="password"
+          type="text"
           placeholder="пароль"
           className="input-field"
           value={password}
